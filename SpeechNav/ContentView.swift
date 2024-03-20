@@ -61,6 +61,7 @@ struct ContentView: View {
                 navigationPath.append(Color.blue)
             case .popNavigation:
                 guard !navigationPath.isEmpty else { return }
+                navigationPath.removeLast()
             case .showSheet:
                 isSheet = true
             case .dismissSheet:
